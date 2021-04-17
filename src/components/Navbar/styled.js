@@ -5,6 +5,7 @@ export const Nav = styled.div`
     width: 80%;
     padding: 30px 0px 30px;
     margin: auto;
+    color: #282538;
 `
 
 export const Title = styled(LinkComponent)`

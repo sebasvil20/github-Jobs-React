@@ -1,12 +1,56 @@
 import styled from 'styled-components'
 import { BiWorld, BiTimeFive } from 'react-icons/bi'
+import { Link as LinkComponent } from '@reach/router'
+
+export const MayorContainer = styled.div`
+  width: 80%;
+  display: flex;
+  margin: auto;
+  margin-top: 50px;
+`
+
+export const ApplyContainer = styled.div`
+  width: 20%;
+  padding-right: 20px;
+`
 
 export const DetailContainer = styled.div`
-  width: 70%;
+  width: 80%;
 `
 
 export const TitleContainer = styled.div`
   display: flex;
+  align-items: center;
+`
+
+export const BackHome = styled(LinkComponent)`
+  color: #1e86ff;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+`
+
+export const ApplyText = styled.p`
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 15px;
+  color: #334680;
+`
+
+export const ApplyTitle = styled.h2`
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #b9bdcf;
+  margin-top: 20px;
 `
 
 export const JobTitle = styled.h1`
@@ -23,15 +67,6 @@ export const CompanyName = styled.h2`
   font-size: 18px;
   font-weight: 700;
   line-height: 21px;
-`
-
-export const Location = styled.div`
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: #b9bdcf;
 `
 
 export const Badge = styled.p`
@@ -67,7 +102,7 @@ export const Label = styled.p`
 `
 
 export const WorldIcon = styled(BiWorld)`
-margin: 0px 5px 0px 0px;
+  margin: 0px 5px 0px 0px;
   color: #b9bdcf;
 `
 
@@ -77,8 +112,8 @@ export const TimeIcon = styled(BiTimeFive)`
 `
 
 export const LogoImage = styled.img`
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   border-radius: 4px;
 `
 
@@ -86,7 +121,7 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 20px;
+  margin-left: 10px;
 `
 
 export const Minicard = styled.div`
