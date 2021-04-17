@@ -35,10 +35,11 @@ export const JobCard = ({
       <LabelContainer>
         <Label>
           <WorldIcon size={20} />
-          New York
+          {location}
         </Label>
         <Label>
           <TimeIcon size={20} />
+          {time}
         </Label>
       </LabelContainer>
     </CardContainer>
