@@ -1,4 +1,5 @@
 import { Router } from "@reach/router";
+import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";
 
@@ -9,6 +10,7 @@ function App() {
       <Router>
         <Home path="/"/>
       </Router>
+      <Footer/>
     </div>
   );
 }

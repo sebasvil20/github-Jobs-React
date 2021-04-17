@@ -5,7 +5,7 @@ export const SearchBar = () => {
     <SearchBarContainer>
       <CompleteBar>
           <CaseIcon size={20}/>
-        <Bar placeholder='Titles, companies, expertise or benefits' />
+        <Bar placeholder='Title, companies, expertise or benefits' />
         <SearchButton type="button">Search</SearchButton>
       </CompleteBar>
     </SearchBarContainer>

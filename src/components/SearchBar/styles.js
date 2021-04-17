@@ -3,7 +3,8 @@ import { BsBriefcase } from 'react-icons/bs'
 
 export const SearchBarContainer = styled.div`
   width: 80%;
-  border-radius: 15px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
   margin: auto;
   height: 200px;
   background-image: url('https://i.ibb.co/S7bx1tz/background-Img.png');
@@ -50,7 +51,7 @@ export const SearchButton = styled.button`
   height: 100%;
   padding: 10px;
   margin-left: 5%;
-  border-radius: 5px;
+  border-radius: 4px;
   border: none;
   outline: none;
   font-size: 18px;
