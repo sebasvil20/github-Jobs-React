@@ -56,4 +56,10 @@ export const SearchButton = styled.button`
   outline: none;
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
+  color: #f7f5fb;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: #0056b8;
+  }
 `
