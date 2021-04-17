@@ -15,6 +15,8 @@ export const Detail = () => {
       jobLocation={'Germany'}
       jobTitle={'PHP Senior'}
       jobDescription={'Hello'}
+      jobTime={'5 days ago'}
+      companyImage={'https://images.unsplash.com/photo-1585842630354-c6766ebf210d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'}
     />
   )
 }

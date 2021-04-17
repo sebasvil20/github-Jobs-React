@@ -1,3 +1,19 @@
+import {
+  JobTitle,
+  CompanyName,
+  Location,
+  Badge,
+  Content,
+  TitleContainer,
+  DetailContainer,
+  WorldIcon,
+  TimeIcon,
+  Label,
+  Minicard,
+  LogoImage,
+  TextContainer,
+} from './styles'
+
 export const DetailedJob = ({
   jobId,
   jobType,
@@ -6,6 +22,32 @@ export const DetailedJob = ({
   jobLocation,
   jobTitle,
   jobDescription,
+  jobTime,
+  companyImage,
 }) => {
-  return <h1>Detailed Job {jobId}</h1>
+  return (
+    <DetailContainer>
+      <TitleContainer>
+        <JobTitle>{jobTitle}</JobTitle>
+        <Badge> {jobType} </Badge>
+      </TitleContainer>
+
+      <Label>
+        <TimeIcon size={20} />
+        {jobTime}
+      </Label>
+
+      <Minicard>
+        <LogoImage src={companyImage} />
+        <TextContainer>
+          <CompanyName>{company}</CompanyName>
+          <Label>
+            <WorldIcon size={20} />
+            {jobLocation}
+          </Label>
+        </TextContainer>
+      </Minicard>
+      <Content dangerouslySetInnerHTML={{ __html: jobDescription }} />
+    </DetailContainer>
+  )
 }
