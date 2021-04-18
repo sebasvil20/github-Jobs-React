@@ -16,6 +16,7 @@ export const CardContainer = styled.div`
 export const Image = styled.img`
   width: 110px;
   height: 110px;
+  min-width: 110px;
   border-radius: 4px;
 `
 
@@ -50,7 +51,7 @@ export const TextContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  width: 50%;
+  width: 40%;
   height: 100%;
   padding: 10px;
 `

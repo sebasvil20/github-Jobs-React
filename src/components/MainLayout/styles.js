@@ -5,5 +5,6 @@ export const MainContainer = styled.div`
     margin: auto;
     margin-top: 40px;
     display: flex;
+    flex-wrap: wrap;
     
 `
