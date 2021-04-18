@@ -6,12 +6,14 @@ export const JobsList = ({ jobs }) => {
     <JobsContainer>
       {jobs.map((job) => (
         <JobCard 
+          key={job.id}
           img={job.company_logo}
           title={job.title}
           company={job.company}
           badge={job.type}
           time={job.created_at}
           location={job.location}
+          id={job.id}
         />
       ))}
     </JobsContainer>

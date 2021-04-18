@@ -5,7 +5,7 @@ export const SideBar = () => {
     <SideBarContainer>
       <div>
           <CheckBoxInput type="checkbox" value="fullTime" id="fullTime"/> 
-          <CheckBoxFullTime for="fullTime">Full Time</CheckBoxFullTime>
+          <CheckBoxFullTime htmlFor="fullTime">Full Time</CheckBoxFullTime>
       </div>
       <div>
           <Title>

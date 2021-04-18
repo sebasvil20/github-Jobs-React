@@ -16,6 +16,7 @@ export const ApplyContainer = styled.div`
 
 export const DetailContainer = styled.div`
   width: 80%;
+  padding-left: 50px;
 `
 
 export const TitleContainer = styled.div`

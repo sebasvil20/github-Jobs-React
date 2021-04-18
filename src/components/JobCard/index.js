@@ -20,7 +20,8 @@ export const JobCard = ({
   company = 'Company name',
   badge = 'Badge text',
   time = '5',
-  location = 'New York'
+  location = 'New York',
+  id
 }) => {
 
 
@@ -29,7 +30,7 @@ export const JobCard = ({
       <Image src={img} />
       <TextContainer>
         <Company>{company}</Company>
-        <Title>{title}</Title>
+        <Title to={`/detail/${id}`}>{title}</Title>
         <Badge>{badge}</Badge>
       </TextContainer>
       <LabelContainer>

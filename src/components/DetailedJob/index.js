@@ -15,7 +15,7 @@ import {
   ApplyContainer,
   ApplyText,
   ApplyTitle,
-  BackHome
+  BackHome,
 } from './styles'
 
 export const DetailedJob = ({
@@ -33,11 +33,9 @@ export const DetailedJob = ({
   return (
     <MayorContainer>
       <ApplyContainer>
-        <BackHome to="/">Back to search</BackHome>
+        <BackHome to='/'>Back to search</BackHome>
         <ApplyTitle>LOCATION</ApplyTitle>
-        <ApplyText>
-          {howToApply}
-        </ApplyText>
+        <ApplyText dangerouslySetInnerHTML={{ __html: howToApply }} />
       </ApplyContainer>
       <DetailContainer>
         <TitleContainer>
@@ -53,7 +51,9 @@ export const DetailedJob = ({
         <Minicard>
           <LogoImage src={companyImage} />
           <TextContainer>
-            <CompanyName>{company}</CompanyName>
+            <a href={companyUrl} target='_blank' rel='noreferrer'>
+              <CompanyName>{company}</CompanyName>
+            </a>
             <Label>
               <WorldIcon size={20} />
               {jobLocation}

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { BiWorld, BiTimeFive } from 'react-icons/bi'
+import {Link as LinkComponent} from '@reach/router'
 
 export const CardContainer = styled.div`
   height: 120px;
@@ -28,12 +29,13 @@ export const Company = styled.p`
   color: #334680;
 `
 
-export const Title = styled.h1`
+export const Title = styled(LinkComponent)`
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
   line-height: 21.09px;
   font-weight: 400;
   color: #334680;
+  text-decoration: none;
 `
 
 export const Badge = styled.p`
