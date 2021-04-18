@@ -5,6 +5,8 @@ import jobsJSON from '../FakeApi'
 
 export const Home = () => {
   const [searchKeyword, setSearchKeyword] = useState('')
+  const [searchLocation, setSearchLocation] = useState('')
+  const [checked, setChecked] = useState(false)
 
   const [jobs, setJobs] = useState([])
   const [jobsToPrint, setJobsToPrint] = useState([])
@@ -26,26 +28,70 @@ export const Home = () => {
   //Filter Jobs
   const filter = async () => {
     const filtered = await jobs.filter((job) => {
-      return (
-        job.description.toLowerCase().includes(searchKeyword.toLowerCase()) ||
-        job.title.toLowerCase().includes(searchKeyword.toLowerCase()) ||
-        job.company.toLowerCase().includes(searchKeyword.toLowerCase()) 
-      )
+      return searchKeyword !== '' && searchLocation !== '' && checked
+        ? (job.description
+            .toLowerCase()
+            .includes(searchKeyword.toLowerCase()) &&
+            job.type === 'Full Time' &&
+            job.location
+              .toLowerCase()
+              .includes(searchLocation.toLowerCase())) ||
+            (job.title.toLowerCase().includes(searchKeyword.toLowerCase()) &&
+              job.type === 'Full Time' &&
+              job.location
+                .toLowerCase()
+                .includes(searchLocation.toLowerCase())) ||
+            (job.company.toLowerCase().includes(searchKeyword.toLowerCase()) &&
+              job.type === 'Full Time' &&
+              job.location.toLowerCase().includes(searchLocation.toLowerCase()))
+        : searchKeyword !== '' && checked
+        ? (job.description
+            .toLowerCase()
+            .includes(searchKeyword.toLowerCase()) &&
+            job.type === 'Full Time') ||
+          (job.title.toLowerCase().includes(searchKeyword.toLowerCase()) &&
+            job.type === 'Full Time') ||
+          (job.company.toLowerCase().includes(searchKeyword.toLowerCase()) &&
+            job.type === 'Full Time')
+        : searchKeyword !== '' && searchLocation !== ''
+        ? (job.description
+            .toLowerCase()
+            .includes(searchKeyword.toLowerCase()) &&
+            job.location
+              .toLowerCase()
+              .includes(searchLocation.toLowerCase())) ||
+          (job.title.toLowerCase().includes(searchKeyword.toLowerCase()) &&
+            job.location
+              .toLowerCase()
+              .includes(searchLocation.toLowerCase())) ||
+          (job.company.toLowerCase().includes(searchKeyword.toLowerCase()) &&
+            job.location.toLowerCase().includes(searchLocation.toLowerCase()))
+        : searchLocation !== '' && checked
+        ? job.location.toLowerCase().includes(searchLocation.toLowerCase()) &&
+          job.type === 'Full Time'
+        : checked
+        ? job.type === 'Full Time'
+        : searchLocation !== ''
+        ? job.location.toLowerCase().includes(searchLocation.toLowerCase())
+        : searchKeyword !== ''
+        ? job.description.toLowerCase().includes(searchKeyword.toLowerCase()) ||
+          job.title.toLowerCase().includes(searchKeyword.toLowerCase()) ||
+          job.company.toLowerCase().includes(searchKeyword.toLowerCase())
+        : null
     })
     setJobsToPrint(filtered)
     setLoading(false)
   }
 
   useEffect(() => {
-    if (searchKeyword === '') {
+    if (searchKeyword === '' && checked === false && searchLocation === '') {
       setData()
     } else {
       setLoading(true)
       filter()
     }
-
     //eslint-disable-next-line
-  }, [searchKeyword])
+  }, [searchKeyword, checked, searchLocation])
 
   return (
     <>
@@ -55,6 +101,9 @@ export const Home = () => {
         loading={loading}
         setLoading={setLoading}
         keyword={searchKeyword}
+        setChecked={setChecked}
+        setSearchLocation={setSearchLocation}
+        searchLocation={searchLocation}
       />
     </>
   )

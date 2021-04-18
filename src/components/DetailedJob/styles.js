@@ -64,11 +64,12 @@ export const JobTitle = styled.h1`
   margin-right: 25px;
 `
 
-export const CompanyName = styled.h2`
+export const CompanyName = styled.a`
   color: #334680;
   font-size: 18px;
   font-weight: 700;
   line-height: 21px;
+  text-decoration: none;
 `
 
 export const Badge = styled.p`

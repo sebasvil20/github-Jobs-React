@@ -51,9 +51,9 @@ export const DetailedJob = ({
         <Minicard>
           <LogoImage src={companyImage} />
           <TextContainer>
-            <a href={companyUrl} target='_blank' rel='noreferrer'>
-              <CompanyName>{company}</CompanyName>
-            </a>
+            <CompanyName href={companyUrl} target='_blank' rel='noreferrer'>
+              {company}
+            </CompanyName>
             <Label>
               <WorldIcon size={20} />
               {jobLocation}

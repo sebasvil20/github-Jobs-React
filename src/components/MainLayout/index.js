@@ -4,11 +4,9 @@ import { Pagination } from '../Pagination'
 import { SideBar } from '../SideBar'
 import { MainContainer } from './styles'
 
-
-export const MainLayout = ({jobs, loading, setLoading}) => {
+export const MainLayout = ({ jobs, loading, setLoading, setChecked, setSearchLocation, searchLocation }) => {
   const [currentPage, setCurrentPage] = useState(1)
   const [jobsPerPage] = useState(5)
-
 
   //Get current jobs
   const indexOfLastJob = currentPage * jobsPerPage
@@ -22,7 +20,11 @@ export const MainLayout = ({jobs, loading, setLoading}) => {
 
   return (
     <MainContainer>
-      <SideBar />
+      <SideBar 
+        setChecked={setChecked}
+        setSearchLocation={setSearchLocation}
+        searchLocation={searchLocation}
+      />
       {loading ? (
         <h1>Loading</h1>
       ) : (
