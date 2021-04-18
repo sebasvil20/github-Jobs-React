@@ -34,32 +34,12 @@ export const CaseIcon = styled(BsBriefcase)`
 `
 
 export const Bar = styled.input`
-  width: 60%;
+  width: 80%;
   padding: 20px;
   border: none;
   outline: none;
 
   @media only screen and (max-width: 1600px) {
     width: 50%;
-  }
-`
-
-export const SearchButton = styled.button`
-  width: 20%;
-  color: white;
-  background-color: #1e86ff;
-  height: 100%;
-  padding: 10px;
-  margin-left: 5%;
-  border-radius: 4px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  font-family: 'Roboto', sans-serif;
-  color: #f7f5fb;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  &:hover {
-    background-color: #0056b8;
   }
 `

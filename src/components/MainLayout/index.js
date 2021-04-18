@@ -1,29 +1,14 @@
 import { useState } from 'react'
-import { useEffect } from 'react'
 import { JobsList } from '../JobsList'
 import { Pagination } from '../Pagination'
 import { SideBar } from '../SideBar'
 import { MainContainer } from './styles'
 
-import jobsJSON from '../../FakeApi'
 
-export const MainLayout = ({searchKeyword}) => {
-  const [jobs, setJobs] = useState([jobsJSON[0]])
-  const [loading, setLoading] = useState(true)
+export const MainLayout = ({jobs, loading, setLoading}) => {
   const [currentPage, setCurrentPage] = useState(1)
   const [jobsPerPage] = useState(5)
 
-  const jsonToJobs = []
-
-  useEffect(() => {
-    const setData = async () => {
-      await jobsJSON.map((job) => jsonToJobs.push(job))
-      setJobs(jsonToJobs)
-      setLoading(false)
-    }
-    setData();
-    //eslint-disable-next-line
-  }, [])
 
   //Get current jobs
   const indexOfLastJob = currentPage * jobsPerPage
@@ -33,11 +18,6 @@ export const MainLayout = ({searchKeyword}) => {
   const paginate = async (pageNumber) => {
     await setCurrentPage(pageNumber)
     setLoading(false)
-  }
-
-  //Filter Jobs
-  const filterJobs = () =>{
-    
   }
 
   return (

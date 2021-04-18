@@ -12,6 +12,7 @@ export const MayorContainer = styled.div`
 export const ApplyContainer = styled.div`
   width: 20%;
   padding-right: 20px;
+  overflow: hidden;
 `
 
 export const DetailContainer = styled.div`

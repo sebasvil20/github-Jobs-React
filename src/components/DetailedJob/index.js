@@ -34,7 +34,7 @@ export const DetailedJob = ({
     <MayorContainer>
       <ApplyContainer>
         <BackHome to='/'>Back to search</BackHome>
-        <ApplyTitle>LOCATION</ApplyTitle>
+        <ApplyTitle>How to apply</ApplyTitle>
         <ApplyText dangerouslySetInnerHTML={{ __html: howToApply }} />
       </ApplyContainer>
       <DetailContainer>

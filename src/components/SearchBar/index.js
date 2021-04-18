@@ -1,4 +1,4 @@
-import { SearchBarContainer, Bar, CompleteBar, CaseIcon, SearchButton } from './styles'
+import { SearchBarContainer, Bar, CompleteBar, CaseIcon } from './styles'
 
 export const SearchBar = ({handleSearch}) => {
   return (
@@ -6,7 +6,6 @@ export const SearchBar = ({handleSearch}) => {
       <CompleteBar>
           <CaseIcon size={20}/>
         <Bar placeholder='Title, companies, expertise or benefits' onChange={(e) => handleSearch(e)}/>
-        <SearchButton type="button">Search</SearchButton>
       </CompleteBar>
     </SearchBarContainer>
   )
