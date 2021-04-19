@@ -4,7 +4,10 @@ export const PaginationContainer = styled.div`
   display: block;
   min-width: 100%;
   margin: auto;
-  overflow-x: scroll;
+
+  @media only screen and (max-width: 1230px) {
+    overflow-x: scroll;
+  }
 `
 
 export const PageNumber = styled.button`
@@ -23,4 +26,8 @@ export const List = styled.ul`
   list-style: none;
   margin: auto;
   justify-content: center;
+
+  @media only screen and (max-width: 1230px) {
+    padding-left: 100px;
+  }
 `
