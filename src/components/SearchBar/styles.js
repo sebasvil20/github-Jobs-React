@@ -28,7 +28,7 @@ export const CompleteBar = styled.div`
   justify-content: space-around;
   overflow: hidden;
 
-  @media only screen and (max-width: 900px){
+  @media only screen and (max-width: 900px) {
     width: 80%;
   }
 `
@@ -42,8 +42,8 @@ export const Bar = styled.input`
   padding: 20px;
   border: none;
   outline: none;
-  
-  @media only screen and (max-width: 900px){
+
+  @media only screen and (max-width: 900px) {
     width: 90%;
   }
 `

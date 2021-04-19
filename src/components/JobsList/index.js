@@ -5,7 +5,7 @@ export const JobsList = ({ jobs }) => {
   return (
     <JobsContainer>
       {jobs.map((job) => (
-        <JobCard 
+        <JobCard
           key={job.id}
           img={job.company_logo}
           title={job.title}

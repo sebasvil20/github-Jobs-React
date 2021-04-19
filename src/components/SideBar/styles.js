@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import { BiWorld } from "react-icons/bi";
+import { BiWorld } from 'react-icons/bi'
 
 export const SideBarContainer = styled.div`
-  width: 30%; 
-  @media only screen and (max-width: 1250px){
+  width: 30%;
+  @media only screen and (max-width: 1250px) {
     width: 100%;
     margin-bottom: 50px;
   }
@@ -43,7 +43,6 @@ export const LocationInput = styled.input`
   line-height: 14px;
   min-width: 80%;
   height: 100%;
-
 `
 
 export const LocationContainer = styled.div`
@@ -56,14 +55,13 @@ export const LocationContainer = styled.div`
   height: 50px;
   align-items: center;
   margin-top: 20px;
-  
-  
-  @media only screen and (max-width: 1250px){
+
+  @media only screen and (max-width: 1250px) {
     width: 100%;
   }
 `
 
 export const WorldIcon = styled(BiWorld)`
-    color: #B9BDCF;
-    margin: 0px 10px 0px 10px;
+  color: #b9bdcf;
+  margin: 0px 10px 0px 10px;
 `

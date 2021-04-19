@@ -21,10 +21,8 @@ export const JobCard = ({
   badge = 'Badge text',
   time = '5',
   location = 'New York',
-  id
+  id,
 }) => {
-
-
   return (
     <CardContainer>
       <Image src={img} />

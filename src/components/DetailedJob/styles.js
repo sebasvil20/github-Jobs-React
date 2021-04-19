@@ -7,17 +7,31 @@ export const MayorContainer = styled.div`
   display: flex;
   margin: auto;
   margin-top: 50px;
+
+  @media only screen and (max-width: 900px) {
+    flex-wrap: wrap;
+  }
 `
 
 export const ApplyContainer = styled.div`
   width: 20%;
   padding-right: 20px;
   overflow: hidden;
+
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+  }
 `
 
 export const DetailContainer = styled.div`
   width: 80%;
   padding-left: 50px;
+
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    margin-top: 50px;
+    padding: 0;
+  }
 `
 
 export const TitleContainer = styled.div`
