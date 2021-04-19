@@ -4,6 +4,7 @@ export const PaginationContainer = styled.div`
   display: block;
   min-width: 100%;
   margin: auto;
+  overflow-x: scroll;
 `
 
 export const PageNumber = styled.button`
