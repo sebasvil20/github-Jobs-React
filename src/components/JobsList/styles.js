@@ -9,3 +9,9 @@ export const JobsContainer = styled.div`
     padding: 0;
   }
 `
+
+export const NoData = styled.h1`
+  width: 100%;
+  color: #334680;
+  text-align: center;
+`
