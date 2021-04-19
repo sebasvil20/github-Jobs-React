@@ -30,4 +30,16 @@ export const List = styled.ul`
   @media only screen and (max-width: 1230px) {
     padding-left: 100px;
   }
+  
+  @media only screen and (max-width: 900px) {
+    padding-left: 250px;
+  }
+  
+  @media only screen and (max-width: 530px) {
+    padding-left: 350px;
+  }
+  
+  @media only screen and (max-width: 366px) {
+    padding-left: 380px;
+  }
 `
