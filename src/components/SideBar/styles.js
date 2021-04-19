@@ -2,7 +2,11 @@ import styled from 'styled-components'
 import { BiWorld } from "react-icons/bi";
 
 export const SideBarContainer = styled.div`
-  width: 30%;
+  width: 30%; 
+  @media only screen and (max-width: 1250px){
+    width: 100%;
+    margin-bottom: 50px;
+  }
 `
 
 export const CheckBoxFullTime = styled.label`
@@ -39,6 +43,7 @@ export const LocationInput = styled.input`
   line-height: 14px;
   min-width: 80%;
   height: 100%;
+
 `
 
 export const LocationContainer = styled.div`
@@ -51,6 +56,11 @@ export const LocationContainer = styled.div`
   height: 50px;
   align-items: center;
   margin-top: 20px;
+  
+  
+  @media only screen and (max-width: 1250px){
+    width: 100%;
+  }
 `
 
 export const WorldIcon = styled(BiWorld)`

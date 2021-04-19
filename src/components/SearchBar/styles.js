@@ -27,6 +27,10 @@ export const CompleteBar = styled.div`
   align-items: center;
   justify-content: space-around;
   overflow: hidden;
+
+  @media only screen and (max-width: 900px){
+    width: 80%;
+  }
 `
 
 export const CaseIcon = styled(BsBriefcase)`
@@ -34,12 +38,12 @@ export const CaseIcon = styled(BsBriefcase)`
 `
 
 export const Bar = styled.input`
-  width: 80%;
+  width: 90%;
   padding: 20px;
   border: none;
   outline: none;
-
-  @media only screen and (max-width: 1600px) {
-    width: 50%;
+  
+  @media only screen and (max-width: 900px){
+    width: 90%;
   }
 `

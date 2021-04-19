@@ -3,7 +3,7 @@ import { BiWorld, BiTimeFive } from 'react-icons/bi'
 import {Link as LinkComponent} from '@reach/router'
 
 export const CardContainer = styled.div`
-  height: 120px;
+  min-height: 120px;
   border-radius: 5px;
   display: flex;
   overflow: hidden;
@@ -12,6 +12,13 @@ export const CardContainer = styled.div`
   margin-bottom: 30px;
   background: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+
+
+  @media only screen and (max-width: 900px){
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
 `
 
 export const Image = styled.img`
@@ -19,6 +26,9 @@ export const Image = styled.img`
   height: 110px;
   min-width: 110px;
   border-radius: 4px;
+  @media only screen and (max-width: 900px){
+    margin: 10px 0px 20px 0px;
+  }
 `
 
 export const Company = styled.p`
@@ -27,6 +37,10 @@ export const Company = styled.p`
   font-weight: 700;
   line-height: 14.06px;
   color: #334680;
+  
+  @media only screen and (max-width: 1250px){
+    font-size: 10px;
+  }
 `
 
 export const Title = styled(LinkComponent)`
@@ -36,6 +50,14 @@ export const Title = styled(LinkComponent)`
   font-weight: 400;
   color: #334680;
   text-decoration: none;
+  @media only screen and (max-width: 1250px){
+    font-size: 16px;
+  }
+  
+  @media only screen and (max-width: 900px){
+    margin-bottom: 10px;
+  }
+  
 `
 
 export const Badge = styled.p`
@@ -46,6 +68,13 @@ export const Badge = styled.p`
   border: 1px solid #334680;
   border-radius: 4px;
   color: #334680;
+  
+  @media only screen and (max-width: 1250px){
+    font-size: 10px;
+    line-height: 8px;
+  }
+  
+  
 `
 
 export const TextContainer = styled.div`
@@ -54,8 +83,24 @@ export const TextContainer = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   width: 40%;
+  min-width: 40%;
   height: 100%;
-  padding: 10px;
+  padding: 0px 0px 0px 10px;
+  
+  @media only screen and (max-width: 1250px){
+    width: 40%;
+    min-width: 40%;
+  }
+
+  
+  @media only screen and (max-width: 900px){
+    width: 100%;
+    min-width: 100%;
+    align-items: center;
+  }
+  
+
+  
 `
 
 export const LabelContainer = styled.div`
@@ -68,6 +113,12 @@ export const LabelContainer = styled.div`
   color: #b9bdcf;
   flex-wrap: wrap;
   margin-top: 60px;
+  
+  @media only screen and (max-width: 900px){
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  
 `
 export const Label = styled.p`
   margin-left: 10px;
